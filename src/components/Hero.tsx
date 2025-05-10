@@ -21,7 +21,7 @@ const Hero = () => {
             </h1>
             <div className="h-1 w-24 bg-portfolio-accent"></div>
             <h3 className="text-2xl md:text-3xl text-portfolio-gray">
-              AI Engineer & Data Scientist
+              AI Engineer, Data Scientist & Certified Leader
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl">
               I specialize in developing AI-driven solutions to optimize workflows and
