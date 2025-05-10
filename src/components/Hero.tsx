@@ -71,7 +71,7 @@ const Hero = () => {
                 <img alt="Shawon Kumar Mondal" className="w-full h-full object-cover" src="/lovable-uploads/84fe97e0-dab1-4226-9a04-d7991ca52a1f.jpg" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white text-portfolio-blue p-4 rounded-lg shadow-lg z-20 backdrop-blur-sm">
-                <p className="font-medium">5+ Years Experience</p>
+                <p className="font-medium">3+ Years Experience</p>
               </div>
               
               {/* Tech circles */}
