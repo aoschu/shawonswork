@@ -41,20 +41,20 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-portfolio-blue font-bold text-xl md:text-2xl font-heading">
+        <div className={`text-2xl md:text-3xl font-bold font-heading ${isScrolled ? 'text-portfolio-blue' : 'text-white'}`}>
           <a href="#home" className="flex items-center">
-            SK<span className="text-portfolio-accent">.</span>
+            SK<span className="text-yellow-400">.</span>
           </a>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-8 items-center">
           {["home", "about", "education", "experience", "achievements", "projects", "contact"].map(
             (item) => (
               <button
                 key={item}
                 onClick={() => navigateTo(item)}
-                className="text-gray-700 hover:text-portfolio-accent font-medium capitalize transition-colors"
+                className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-yellow-400 font-medium capitalize transition-colors`}
               >
                 {item}
               </button>
@@ -63,7 +63,7 @@ const Header = () => {
           <a 
             href="/ShawonKumarMondal-CV.pdf" 
             download 
-            className="bg-portfolio-blue text-white px-4 py-2 rounded hover:bg-portfolio-lightBlue transition-colors"
+            className="bg-yellow-400 text-portfolio-blue px-6 py-2 rounded-full hover:bg-yellow-500 transition-colors font-medium"
           >
             Download CV
           </a>
@@ -71,7 +71,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 focus:outline-none"
+          className={`md:hidden ${isScrolled ? 'text-gray-700' : 'text-white'} focus:outline-none`}
           onClick={toggleMenu}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -96,7 +96,7 @@ const Header = () => {
             <a 
               href="/ShawonKumarMondal-CV.pdf" 
               download 
-              className="bg-portfolio-blue text-white px-4 py-2 rounded hover:bg-portfolio-lightBlue transition-colors text-center mt-4"
+              className="bg-yellow-400 text-portfolio-blue px-4 py-2 rounded-full hover:bg-yellow-500 transition-colors text-center mt-4 font-medium"
             >
               Download CV
             </a>
