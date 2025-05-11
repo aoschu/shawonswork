@@ -1,5 +1,6 @@
 
 import React from "react";
+import { FileText } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -51,8 +52,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/ShawonKumarMondal-CV.pdf" download className="hover:text-portfolio-lightBlue transition-colors">
-                    Download CV
+                  <a href="/ShawonKumarMondal-CV.pdf" download className="hover:text-portfolio-lightBlue transition-colors flex items-center">
+                    <FileText className="mr-2 h-4 w-4" /> Download CV
                   </a>
                 </li>
               </ul>

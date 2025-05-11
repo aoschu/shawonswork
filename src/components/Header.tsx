@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,14 +70,14 @@ const Header = () => {
             href="/ShawonKumarMondal-CV.pdf" 
             download 
             className={`
-              px-6 py-2 rounded-full transition-all duration-300 font-medium text-sm
+              px-6 py-2 rounded-full transition-all duration-300 font-medium text-sm flex items-center
               ${isScrolled
                 ? 'bg-yellow-400 text-portfolio-blue hover:bg-yellow-500'
                 : 'bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20'
               }
             `}
           >
-            Download CV
+            <FileText className="mr-2 h-4 w-4" /> Download CV
           </a>
         </nav>
 
@@ -108,9 +108,9 @@ const Header = () => {
             <a 
               href="/ShawonKumarMondal-CV.pdf" 
               download 
-              className="bg-yellow-400 text-portfolio-blue px-4 py-2 rounded-full hover:bg-yellow-500 transition-colors text-center mt-4 font-medium"
+              className="bg-yellow-400 text-portfolio-blue px-4 py-2 rounded-full hover:bg-yellow-500 transition-colors text-center mt-4 font-medium flex items-center justify-center"
             >
-              Download CV
+              <FileText className="mr-2 h-4 w-4" /> Download CV
             </a>
           </nav>
         </div>
