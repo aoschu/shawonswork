@@ -1,7 +1,8 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface ProjectCardProps {
   title: string;
@@ -75,7 +76,7 @@ const ProjectCard = ({
 );
 
 const Projects = () => {
-  const projectsData = [
+  const aiProjectsData = [
     {
       title: "Low-Light Image Enhancement using MIRnet",
       description:
@@ -115,32 +116,97 @@ const Projects = () => {
     },
   ];
 
+  const arduinoProjectsData = [
+    {
+      title: "Line Following Robot",
+      description:
+        "Autonomous robot capable of following predefined paths with precision control systems.",
+      duration: "January 2016 - May 2016",
+      technologies: ["Arduino", "Sensors", "C++", "Electronics", "Robotics"],
+      image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c?fit=crop&w=800&h=500&q=80",
+      repoLink: "#",
+    },
+    {
+      title: "Sun Tracker",
+      description:
+        "Automated system designed to align with the sun's position for maximum energy capture in solar applications.",
+      duration: "June 2016 - September 2016",
+      technologies: ["Arduino", "Servo Motors", "Light Sensors", "Solar Technology"],
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?fit=crop&w=800&h=500&q=80",
+      repoLink: "#",
+    },
+    {
+      title: "Smart Home System",
+      description:
+        "Integrated automation solutions for home control and monitoring, including temperature, lighting, and security features.",
+      duration: "October 2016 - February 2017",
+      technologies: ["Arduino", "IoT", "Sensors", "Home Automation"],
+      image: "https://images.unsplash.com/photo-1558002038-1055907df827?fit=crop&w=800&h=500&q=80",
+      repoLink: "#",
+    },
+    {
+      title: "Smart Traffic Light Control",
+      description:
+        "Adaptive traffic management system based on real-time inputs to optimize traffic flow and reduce congestion.",
+      duration: "March 2017 - July 2017",
+      technologies: ["Arduino", "Traffic Systems", "Sensors", "C++", "Microcontrollers"],
+      image: "https://images.unsplash.com/photo-1606768666853-403c90a981ad?fit=crop&w=800&h=500&q=80",
+      repoLink: "#",
+    },
+  ];
+
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-blue font-heading">Projects</h2>
           <div className="h-1 w-24 bg-portfolio-accent mx-auto mt-4 mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Here are some of my featured projects that highlight my expertise in AI, machine learning, 
-            computer vision, and natural language processing.
+            computer vision, natural language processing, and embedded systems.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectsData.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              duration={project.duration}
-              technologies={project.technologies}
-              image={project.image}
-              demoLink={project.demoLink}
-              repoLink={project.repoLink}
-            />
-          ))}
-        </div>
+        <Tabs defaultValue="ai" className="w-full mb-8">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
+            <TabsTrigger value="ai">AI & ML Projects</TabsTrigger>
+            <TabsTrigger value="arduino">Arduino Projects</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="ai" className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {aiProjectsData.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  duration={project.duration}
+                  technologies={project.technologies}
+                  image={project.image}
+                  demoLink={project.demoLink}
+                  repoLink={project.repoLink}
+                />
+              ))}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="arduino" className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {arduinoProjectsData.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  duration={project.duration}
+                  technologies={project.technologies}
+                  image={project.image}
+                  demoLink={project.demoLink}
+                  repoLink={project.repoLink}
+                />
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );

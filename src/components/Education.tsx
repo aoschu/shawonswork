@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { BookOpen, Code, Users, Trophy } from "lucide-react";
 
 interface EducationItemProps {
   degree: string;
@@ -8,9 +9,14 @@ interface EducationItemProps {
   duration: string;
   location: string;
   details: string;
+  activities?: Array<{
+    title: string;
+    icon: "book" | "code" | "users" | "trophy";
+    items: string[];
+  }>;
 }
 
-const EducationItem = ({ degree, institution, duration, location, details }: EducationItemProps) => (
+const EducationItem = ({ degree, institution, duration, location, details, activities }: EducationItemProps) => (
   <Card className="hover:shadow-lg transition-all border-l-4 border-l-portfolio-blue">
     <CardContent className="p-6">
       <h3 className="text-xl font-semibold">{degree}</h3>
@@ -19,7 +25,31 @@ const EducationItem = ({ degree, institution, duration, location, details }: Edu
         <span>{duration}</span>
         <span>{location}</span>
       </div>
-      <p className="text-gray-600">{details}</p>
+      <p className="text-gray-600 mb-4">{details}</p>
+      
+      {activities && activities.length > 0 && (
+        <div className="mt-4 space-y-4">
+          {activities.map((activity, index) => (
+            <div key={index} className="border-t pt-3">
+              <div className="flex items-center mb-2">
+                {activity.icon === "book" && <BookOpen className="h-5 w-5 text-portfolio-blue mr-2" />}
+                {activity.icon === "code" && <Code className="h-5 w-5 text-portfolio-blue mr-2" />}
+                {activity.icon === "users" && <Users className="h-5 w-5 text-portfolio-blue mr-2" />}
+                {activity.icon === "trophy" && <Trophy className="h-5 w-5 text-portfolio-blue mr-2" />}
+                <h5 className="font-medium text-lg text-portfolio-blue">{activity.title}</h5>
+              </div>
+              <ul className="space-y-1 ml-7">
+                {activity.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="text-gray-600 flex items-start">
+                    <span className="w-1.5 h-1.5 bg-portfolio-accent rounded-full mr-2 mt-2"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
     </CardContent>
   </Card>
 );
@@ -38,7 +68,29 @@ const Education = () => {
       institution: "Ahsanullah University of Science and Technology",
       duration: "October 2014 - December 2018",
       location: "Bangladesh",
-      details: "Developed a strong foundation in electrical systems, circuit design, and programming fundamentals."
+      details: "Developed a strong foundation in electrical systems, circuit design, and programming fundamentals.",
+      activities: [
+        {
+          title: "Activities and Societies",
+          icon: "users",
+          items: [
+            "Robotics Club: Champion and 2nd Runner-Up at LFR (Line Following Robot) competitions (01/2016 - 09/2017).",
+            "Cultural Club: Participated in cultural events and activities.",
+            "Cricket Club: Active member and participant in sports events."
+          ]
+        },
+        {
+          title: "Skills Acquired",
+          icon: "code",
+          items: [
+            "Programming: Python, Arduino IDE.",
+            "Engineering: Electrical Engineering, Electronic Engineering, Antenna Design.",
+            "Tools: ANSYS HFSS, Arduino IDE.",
+            "Soft Skills: Knowledge sharing, leadership, teamwork.",
+            "Languages: English."
+          ]
+        }
+      ]
     }
   ];
 
@@ -63,6 +115,7 @@ const Education = () => {
               duration={edu.duration}
               location={edu.location}
               details={edu.details}
+              activities={edu.activities}
             />
           ))}
         </div>

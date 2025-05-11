@@ -7,6 +7,7 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Achievements from "@/components/Achievements";
+import Community from "@/components/Community";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -28,9 +29,12 @@ const Index = () => {
         <Achievements />
       </div>
       <div className="bg-white">
-        <Projects />
+        <Community />
       </div>
       <div className="bg-gray-50">
+        <Projects />
+      </div>
+      <div className="bg-white">
         <Contact />
       </div>
       <Footer />

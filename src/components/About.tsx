@@ -75,6 +75,10 @@ const About = () => {
                 My professional journey includes developing chatbots, document processing pipelines, and image enhancement systems, 
                 where I've consistently delivered high-quality solutions that meet business objectives.
               </p>
+              <p>
+                Apart from my technical expertise, I am also passionate about community service, leadership, and innovative projects. 
+                My involvement in social and educational initiatives reflects my commitment to making a positive impact.
+              </p>
             </div>
           </div>
 

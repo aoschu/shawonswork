@@ -1,13 +1,13 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Star } from "lucide-react";
+import { Award, Star, Trophy } from "lucide-react";
 
 interface AchievementItemProps {
   title: string;
   organization: string;
   date: string;
-  icon: "award" | "star";
+  icon: "award" | "star" | "trophy";
 }
 
 const AchievementItem = ({ title, organization, date, icon }: AchievementItemProps) => (
@@ -17,8 +17,10 @@ const AchievementItem = ({ title, organization, date, icon }: AchievementItemPro
         <div className="bg-portfolio-blue/10 rounded-full p-3 mt-1">
           {icon === "award" ? (
             <Award className="h-6 w-6 text-portfolio-blue" />
-          ) : (
+          ) : icon === "star" ? (
             <Star className="h-6 w-6 text-portfolio-accent" />
+          ) : (
+            <Trophy className="h-6 w-6 text-amber-500" />
           )}
         </div>
         <div>
@@ -56,6 +58,24 @@ const Achievements = () => {
       organization: "National Robotics Competition",
       date: "July 27, 2017",
       icon: "star" as const
+    },
+    {
+      title: "Champion in LFR Competition",
+      organization: "Robotics Club",
+      date: "January 2016",
+      icon: "trophy" as const
+    },
+    {
+      title: "2nd Runner-Up in LFR Competition",
+      organization: "Robotics Club",
+      date: "September 2017",
+      icon: "trophy" as const
+    },
+    {
+      title: "DAAD Scholarship",
+      organization: "German Academic Exchange Service",
+      date: "January 2025",
+      icon: "award" as const
     }
   ];
 
