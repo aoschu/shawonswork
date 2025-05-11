@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, FileText } from "lucide-react";
@@ -66,8 +65,9 @@ const Header = () => {
               </button>
             )
           )}
+          {/* Download CV Button */}
           <a 
-            href="/ShawonKumarMondal-CV.pdf" 
+            href="/lovable-uploads/Shawon_kumar_mondal_cv.pdf"
             download 
             className={`
               px-6 py-2 rounded-full transition-all duration-300 font-medium text-sm flex items-center
@@ -105,8 +105,9 @@ const Header = () => {
                 </button>
               )
             )}
+            {/* Mobile Download CV Button */}
             <a 
-              href="/ShawonKumarMondal-CV.pdf" 
+              href="/lovable-uploads/Shawon_kumar_mondal_cv.pdf"
               download 
               className="bg-yellow-400 text-portfolio-blue px-4 py-2 rounded-full hover:bg-yellow-500 transition-colors text-center mt-4 font-medium flex items-center justify-center"
             >
