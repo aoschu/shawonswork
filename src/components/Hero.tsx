@@ -10,7 +10,7 @@ const Hero = () => {
       });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center py-20 bg-gradient-to-br from-indigo-900 to-indigo-800 overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center py-20 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
 
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-40 h-40 rounded-full bg-yellow-300/30 blur-xl animate-pulse"></div>
