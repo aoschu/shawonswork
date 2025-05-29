@@ -10,7 +10,8 @@ const Hero = () => {
       });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center py-20 bg-gradient-to-br from-portfolio-blue to-portfolio-blue/90 overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center py-20 bg-gradient-to-br from-indigo-900 to-indigo-800 overflow-hidden">
+
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-40 h-40 rounded-full bg-yellow-300/30 blur-xl animate-pulse"></div>
       <div className="absolute bottom-40 left-40 w-56 h-56 rounded-full bg-yellow-300/20 blur-xl"></div>
