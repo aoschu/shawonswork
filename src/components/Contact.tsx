@@ -89,7 +89,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Address</h4>
                     <p className="text-gray-600">
-                      Bntentorsteinweg 396, Bremen, 28201, Germany
+                      Bremen, 28201, Germany
                     </p>
                   </div>
                 </CardContent>
