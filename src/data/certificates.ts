@@ -4,41 +4,40 @@ export type Certificate = {
   caption?: string;
 };
 
+// Update this list by adding your certificate image filenames in the public folder.
+// Example: upload to public/lovable-uploads and add the path here.
 export const certificates: Certificate[] = [
+  {
+    src: "/lovable-uploads/japan-jenesys.jpg",
+    alt: "Japan Jenesys Certificate",
+    caption: "Japan Jenesys Program Certificate",
+  },
+  {
+    src: "/lovable-uploads/green-force-1.jpg",
+    alt: "Green Force 1 Certificate",
+    caption: "Green Force 1 Achievement Certificate",
+  },
+  {
+    src: "/lovable-uploads/green-force-r.jpg",
+    alt: "Green Force R Certificate",
+    caption: "Green Force R Achievement Certificate",
+  },
+  {
+    src: "/lovable-uploads/champion.jpg",
+    alt: "Champion Certificate",
+    caption: "Champion Recognition Certificate",
+  },
+  {
+    src: "/lovable-uploads/butthan.jpg",
+    alt: "Butthan Certificate",
+    caption: "Butthan Award Certificate",
+  },
   {
     src: "/lovable-uploads/bsk.jpg",
     alt: "BSK Certificate",
-    caption: "Details or date here (e.g., Issued [Date])",
+    caption: "BSK Achievement Certificate",
   },
-  {
-    src: "/lovable-uploads/butthan-cert.png",  // Assuming converted from butthan.pdf
-    alt: "Butthan Certificate",
-    caption: "Issued [Date]",
-  },
-  {
-    src: "/lovable-uploads/champion-cert.png",  // Converted from champion.pdf
-    alt: "Champion Certificate",
-    caption: "Issued [Date]",
-  },
-  {
-    src: "/lovable-uploads/green-force-1-cert.png",  // Converted from green force 1.pdf
-    alt: "Green Force 1 Certificate",
-    caption: "Issued [Date]",
-  },
-  {
-    src: "/lovable-uploads/green-force-r-cert.png",  // Converted from green force-r.pdf
-    alt: "Green Force R Certificate",
-    caption: "Issued [Date]",
-  },
-  {
-    src: "/lovable-uploads/japan-jenesys-cert.png",  // Converted from japan jenesys.pdf
-    alt: "Japan Jenesys Certificate",
-    caption: "Issued [Date]",
-  },
-  {
-    src: "/lovable-uploads/og-image.png",
-    alt: "OG Image Certificate",
-    caption: "Issued [Date]",
-  },
-  // Remove samples or add more if needed
+  // Optional: Include og-image.png if it's relevant; otherwise, it's excluded.
+  // Note: The sample 84fe97e0-dab1-4226-9a04-d7991ca52a1f.jpg is excluded.
+  // For your CV (Shawon_kumar_mondal_cv.pdf), consider adding a separate download link.
 ];
