@@ -65,12 +65,7 @@ const Achievements = () => {
       date: "January 2016",
       icon: "trophy" as const
     },
-    {
-      title: "2nd Runner-Up in LFR Competition",
-      organization: "Robotics Club",
-      date: "September 2017",
-      icon: "trophy" as const
-    },
+
     {
       title: "DAAD Scholarship",
       organization: "German Academic Exchange Service",
