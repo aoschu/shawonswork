@@ -52,8 +52,8 @@ const Contact = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-5">
-            <h3 className="text-2xl font-semibold text-portfolio-blue mb-6">Contact Information</h3>
+          <div className="lg:col-span-12">
+            <h3 className="text-2xl font-semibold text-portfolio-blue mb-6 text-center">Contact Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="hover:shadow-md transition-all">
                 <CardContent className="p-6 flex items-start">
@@ -89,15 +89,13 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Address</h4>
                     <p className="text-gray-600">
-                      Bremen, 28201, Germany
+                      Bntentorsteinweg 396, Bremen, 28201, Germany
                     </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </div>
-          
-          
         </div>
       </div>
     </section>
