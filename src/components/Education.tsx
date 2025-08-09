@@ -72,7 +72,7 @@ const Education = () => {
       activities: [
         {
           title: "Activities and Societies",
-          icon: "users",
+          icon: "users" as const,
           items: [
             "Robotics Club: Champion and 2nd Runner-Up at LFR (Line Following Robot) competitions (01/2016 - 09/2017).",
             "Cultural Club: Participated in cultural events and activities.",
@@ -81,7 +81,7 @@ const Education = () => {
         },
         {
           title: "Skills Acquired",
-          icon: "code",
+          icon: "code" as const,
           items: [
             "Programming: Python, Arduino IDE.",
             "Engineering: Electrical Engineering, Electronic Engineering, Antenna Design.",
@@ -95,7 +95,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-blue font-heading">Education</h2>

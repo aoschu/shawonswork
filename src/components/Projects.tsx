@@ -124,6 +124,7 @@ const Projects = () => {
       duration: "January 2016 - May 2016",
       technologies: ["Arduino", "Sensors", "C++", "Electronics", "Robotics"],
       image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c?fit=crop&w=800&h=500&q=80",
+      demoLink: "#",
       repoLink: "#",
     },
     {
@@ -133,6 +134,7 @@ const Projects = () => {
       duration: "June 2016 - September 2016",
       technologies: ["Arduino", "Servo Motors", "Light Sensors", "Solar Technology"],
       image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?fit=crop&w=800&h=500&q=80",
+      demoLink: "#",
       repoLink: "#",
     },
     {
@@ -142,6 +144,7 @@ const Projects = () => {
       duration: "October 2016 - February 2017",
       technologies: ["Arduino", "IoT", "Sensors", "Home Automation"],
       image: "https://images.unsplash.com/photo-1558002038-1055907df827?fit=crop&w=800&h=500&q=80",
+      demoLink: "#",
       repoLink: "#",
     },
     {
@@ -151,12 +154,13 @@ const Projects = () => {
       duration: "March 2017 - July 2017",
       technologies: ["Arduino", "Traffic Systems", "Sensors", "C++", "Microcontrollers"],
       image: "https://images.unsplash.com/photo-1606768666853-403c90a981ad?fit=crop&w=800&h=500&q=80",
+      demoLink: "#",
       repoLink: "#",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-blue font-heading">Projects</h2>

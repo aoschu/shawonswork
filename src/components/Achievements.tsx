@@ -2,7 +2,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Star, Trophy } from "lucide-react";
-
+import Certificates from "@/components/Certificates";
 interface AchievementItemProps {
   title: string;
   organization: string;
@@ -80,7 +80,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className="py-20 bg-gray-50">
+    <section id="achievements" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-blue font-heading">Achievements</h2>
@@ -91,16 +91,21 @@ const Achievements = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
-          {achievementData.map((achievement, index) => (
-            <AchievementItem
-              key={index}
-              title={achievement.title}
-              organization={achievement.organization}
-              date={achievement.date}
-              icon={achievement.icon}
-            />
-          ))}
+        <div className="grid gap-8 md:grid-cols-12">
+          <div className="md:col-span-8 space-y-6">
+            {achievementData.map((achievement, index) => (
+              <AchievementItem
+                key={index}
+                title={achievement.title}
+                organization={achievement.organization}
+                date={achievement.date}
+                icon={achievement.icon}
+              />
+            ))}
+          </div>
+          <div className="md:col-span-4">
+            <Certificates title="Achievement Certificates" />
+          </div>
         </div>
       </div>
     </section>

@@ -98,4 +98,28 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Indigo gradient tokens */
+  :root {
+    --indigo-start: 234 85% 60%;
+    --indigo-end: 260 70% 60%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--indigo-start)), hsl(var(--indigo-end)));
+  }
+
+  .dark {
+    --indigo-start: 234 90% 70%;
+    --indigo-end: 255 80% 66%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--indigo-start)), hsl(var(--indigo-end)));
+  }
+}
+
+@layer utilities {
+  .theme-bg {
+    background-image:
+      radial-gradient(800px 400px at 90% -10%, hsl(var(--indigo-end) / 0.25), transparent 60%),
+      radial-gradient(600px 300px at -10% 100%, hsl(var(--indigo-start) / 0.20), transparent 60%),
+      var(--gradient-primary);
+    background-attachment: fixed, fixed, fixed;
+    background-size: cover;
+  }
 }

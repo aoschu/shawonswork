@@ -13,28 +13,28 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen theme-bg">
       <Header />
       <Hero />
-      <div className="bg-white">
+      <div className="bg-transparent">
         <About />
       </div>
-      <div className="bg-gray-50">
+      <div className="bg-transparent">
         <Education />
       </div>
-      <div className="bg-white">
+      <div className="bg-transparent">
         <Experience />
       </div>
-      <div className="bg-gray-50">
+      <div className="bg-transparent">
         <Achievements />
       </div>
-      <div className="bg-white">
+      <div className="bg-transparent">
         <Community />
       </div>
-      <div className="bg-gray-50">
+      <div className="bg-transparent">
         <Projects />
       </div>
-      <div className="bg-white">
+      <div className="bg-transparent">
         <Contact />
       </div>
       <Footer />

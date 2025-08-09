@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-
+import Certificates from "@/components/Certificates";
 interface ExperienceItemProps {
   position: string;
   company: string;
@@ -61,7 +61,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-portfolio-blue font-heading">Work Experience</h2>
@@ -72,17 +72,22 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
-          {experienceData.map((exp, index) => (
-            <ExperienceItem
-              key={index}
-              position={exp.position}
-              company={exp.company}
-              duration={exp.duration}
-              location={exp.location}
-              responsibilities={exp.responsibilities}
-            />
-          ))}
+        <div className="grid gap-8 md:grid-cols-12">
+          <div className="md:col-span-8 space-y-6">
+            {experienceData.map((exp, index) => (
+              <ExperienceItem
+                key={index}
+                position={exp.position}
+                company={exp.company}
+                duration={exp.duration}
+                location={exp.location}
+                responsibilities={exp.responsibilities}
+              />
+            ))}
+          </div>
+          <div className="md:col-span-4">
+            <Certificates title="Work Certificates" />
+          </div>
         </div>
       </div>
     </section>
