@@ -1,7 +1,7 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Certificates from "@/components/Certificates";
+
 interface ExperienceItemProps {
   position: string;
   company: string;
@@ -71,7 +71,6 @@ const Experience = () => {
             solve real-world problems and deliver impactful solutions.
           </p>
         </div>
-
         <div className="grid gap-8 md:grid-cols-12">
           <div className="md:col-span-8 space-y-6">
             {experienceData.map((exp, index) => (
@@ -85,7 +84,7 @@ const Experience = () => {
               />
             ))}
           </div>
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 md:col-start-5"> {/* Centered the certificates column */}
             <Certificates title="Work Certificates" />
           </div>
         </div>
