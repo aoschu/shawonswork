@@ -12,6 +12,13 @@ export const certificates: Certificate[] = [
     alt: "Japan Jenesys Certificate",
     caption: "Japan Jenesys Program Certificate",
   },
+
+  {
+    src: "/lovable-uploads/praxix.jpg",
+    alt: "PRAXIS Summer Camp",
+    caption: "PRAXIS Summer Camp",
+  },
+  
   {
     src: "/lovable-uploads/green-force-1.jpg",
     alt: "Green Force 1 Certificate",
@@ -27,11 +34,7 @@ export const certificates: Certificate[] = [
     alt: "Champion Certificate",
     caption: "Champion Recognition Certificate",
   },
-  {
-    src: "/lovable-uploads/butthan.jpg",
-    alt: "Butthan Certificate",
-    caption: "Butthan Award Certificate",
-  },
+
   {
     src: "/lovable-uploads/bsk.jpg",
     alt: "BSK Certificate",
