@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import Certificates from "@/components/Certificates";
 
 interface ExperienceItemProps {
   position: string;
@@ -72,7 +71,7 @@ const Experience = () => {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-12">
-          <div className="md:col-span-8 space-y-6">
+          <div className="md:col-span-8 md:col-start-3 space-y-6">
             {experienceData.map((exp, index) => (
               <ExperienceItem
                 key={index}
@@ -83,9 +82,6 @@ const Experience = () => {
                 responsibilities={exp.responsibilities}
               />
             ))}
-          </div>
-          <div className="md:col-span-4 md:col-start-5"> {/* Centered the certificates column */}
-            <Certificates title="Work Certificates" />
           </div>
         </div>
       </div>
