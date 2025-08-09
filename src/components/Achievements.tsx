@@ -44,19 +44,19 @@ const Achievements = () => {
     {
       title: "Leadership Certification",
       organization: "Green Force Training Program",
-      date: "2016",
+      date: "2018",
       icon: "award" as const
     },
     {
       title: "Environmental Awareness Training Certification",
       organization: "Green Force",
-      date: "2016",
+      date: "2018",
       icon: "award" as const
     },
     {
-      title: "2nd Runner-Up in Roborace Category",
-      organization: "National Robotics Competition",
-      date: "July 27, 2017",
+      title: "PRAXIS Summer Camp",
+      organization: "Universität Bremen ",
+      date: "August, 2024",
       icon: "star" as const
     },
     {
@@ -64,13 +64,6 @@ const Achievements = () => {
       organization: "Robotics Club",
       date: "January 2016",
       icon: "trophy" as const
-    },
-
-    {
-      title: "DAAD Scholarship",
-      organization: "German Academic Exchange Service",
-      date: "January 2025",
-      icon: "award" as const
     }
   ];
 
