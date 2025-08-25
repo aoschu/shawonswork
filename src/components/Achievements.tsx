@@ -11,10 +11,10 @@ interface AchievementItemProps {
 }
 
 const AchievementItem = ({ title, organization, date, icon }: AchievementItemProps) => (
-  <Card className="hover:shadow-lg transition-all border-l-4 border-l-portfolio-lightBlue">
+  <Card className="hover:shadow-lg transition-all border-l-4 border-l-portfolio-lightBlue w-full">
     <CardContent className="p-6">
       <div className="flex items-start gap-4">
-        <div className="bg-portfolio-blue/10 rounded-full p-3 mt-1">
+        <div className="bg-portfolio-blue/10 rounded-full p-3 mt-1 flex-shrink-0">
           {icon === "award" ? (
             <Award className="h-6 w-6 text-portfolio-blue" />
           ) : icon === "star" ? (
@@ -23,10 +23,10 @@ const AchievementItem = ({ title, organization, date, icon }: AchievementItemPro
             <Trophy className="h-6 w-6 text-amber-500" />
           )}
         </div>
-        <div>
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <h4 className="font-medium text-portfolio-blue mt-1">{organization}</h4>
-          <p className="text-gray-500 mt-1">{date}</p>
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-portfolio-blue mb-2 leading-tight">{title}</h3>
+          <h4 className="font-semibold text-portfolio-accent text-lg mb-2">{organization}</h4>
+          <p className="text-gray-600 font-medium">{date}</p>
         </div>
       </div>
     </CardContent>
@@ -79,8 +79,8 @@ const Achievements = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-12">
-          <div className="md:col-span-8 space-y-6">
+        <div className="grid gap-12 lg:grid-cols-2 items-start">
+          <div className="space-y-6">
             {achievementData.map((achievement, index) => (
               <AchievementItem
                 key={index}
@@ -91,7 +91,7 @@ const Achievements = () => {
               />
             ))}
           </div>
-          <div className="md:col-span-4">
+          <div>
             <Certificates title="Achievement Certificates" />
           </div>
         </div>
