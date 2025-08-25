@@ -3,8 +3,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
+import ResumeSideBySide from "@/components/ResumeSideBySide";
 import Projects from "@/components/Projects";
 import Achievements from "@/components/Achievements";
 import Community from "@/components/Community";
@@ -20,10 +19,7 @@ const Index = () => {
         <About />
       </div>
       <div className="bg-transparent">
-        <Education />
-      </div>
-      <div className="bg-transparent">
-        <Experience />
+        <ResumeSideBySide />
       </div>
       <div className="bg-transparent">
         <Achievements />

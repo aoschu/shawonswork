@@ -36,13 +36,13 @@ const EducationItem: React.FC<EducationItemProps> = ({
 }) => (
   <Card className="hover:shadow-lg transition-all border-l-4 border-l-portfolio-blue w-full">
     <CardContent className="p-6">
-      <h3 className="text-xl font-semibold">{degree}</h3>
-      <h4 className="font-medium text-portfolio-blue mt-1">{institution}</h4>
-      <div className="flex justify-between text-gray-500 mt-1 mb-3">
-        <span>{duration}</span>
-        <span>{location}</span>
+      <h3 className="text-xl font-bold text-portfolio-blue mb-2 leading-tight">{degree}</h3>
+      <h4 className="font-semibold text-portfolio-accent text-lg mb-2">{institution}</h4>
+      <div className="flex flex-col sm:flex-row sm:justify-between text-gray-600 mb-4 space-y-1 sm:space-y-0">
+        <span className="font-medium">{duration}</span>
+        <span className="italic">{location}</span>
       </div>
-      <p className="text-gray-600 mb-4">{details}</p>
+      <p className="text-gray-700 mb-4 leading-relaxed">{details}</p>
 
       {activities && activities.length > 0 && (
         <div className="mt-4 space-y-4">
@@ -130,17 +130,17 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => (
   <Card className="hover:shadow-lg transition-all border-l-4 border-l-portfolio-accent w-full">
     <CardContent className="p-6">
-      <h3 className="text-xl font-semibold">{position}</h3>
-      <h4 className="font-medium text-portfolio-blue mt-1">{company}</h4>
-      <div className="flex justify-between text-gray-500 mt-1 mb-3">
-        <span>{duration}</span>
-        <span>{location}</span>
+      <h3 className="text-xl font-bold text-portfolio-blue mb-2 leading-tight">{position}</h3>
+      <h4 className="font-semibold text-portfolio-accent text-lg mb-2">{company}</h4>
+      <div className="flex flex-col sm:flex-row sm:justify-between text-gray-600 mb-4 space-y-1 sm:space-y-0">
+        <span className="font-medium">{duration}</span>
+        <span className="italic">{location}</span>
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-3">
         {responsibilities.map((item, index) => (
           <li key={index} className="flex items-start">
-            <span className="w-2 h-2 bg-portfolio-accent rounded-full mr-2 mt-2"></span>
-            <span className="text-gray-600">{item}</span>
+            <span className="w-2 h-2 bg-portfolio-accent rounded-full mr-3 mt-2 flex-shrink-0"></span>
+            <span className="text-gray-700 leading-relaxed">{item}</span>
           </li>
         ))}
       </ul>
@@ -181,7 +181,7 @@ const ResumeSideBySide: React.FC = () => {
   return (
     <section id="resume" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="grid gap-10 md:grid-cols-2 items-start">
+        <div className="grid gap-12 lg:grid-cols-2 items-start">
           {/* Left column — Education */}
           <div>
             <SectionHeader
