@@ -31,7 +31,18 @@ const ExperienceItem = ({ position, company, duration, location, responsibilitie
 );
 
 const Experience = () => {
-  const experienceData = [
+  const experienceData: ExperienceItemProps[] = [
+    {
+      position: "Scientific Researcher — R&D (Full‑time)",
+      company: "Aerospace Data Security GmbH", // Update if the legal name is different (e.g., "Aerospace Data Security GmbH")
+      duration: "Sep 2025 – Present",
+      location: "Germany",
+      responsibilities: [
+        "Research and development on Galileo satellite navigation systems within the R&D group.",
+        "Perform analysis, simulation, and documentation to support secure and reliable navigation.",
+        "Collaborate with cross‑functional teams on requirements, testing, and integration."
+      ]
+    },
     {
       position: "AI and Data Analyst Intern",
       company: "MEKOS GmbH",
@@ -80,8 +91,8 @@ const Experience = () => {
                 duration={exp.duration}
                 location={exp.location}
                 responsibilities={exp.responsibilities}
-              />
-            ))}
+              />)
+            )}
           </div>
         </div>
       </div>
