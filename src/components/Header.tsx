@@ -50,7 +50,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8 items-center">
-          {["home", "about", "education", "experience", "achievements", "projects", "contact"].map(
+          {["home", "about", "resume", "achievements", "projects", "contact"].map(
             (item) => (
               <button
                 key={item}
@@ -94,7 +94,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm absolute w-full shadow-lg animate-fade-in">
           <nav className="flex flex-col p-4">
-            {["home", "about", "education", "experience", "achievements", "projects", "contact"].map(
+            {["home", "about", "resume", "achievements", "projects", "contact"].map(
               (item) => (
                 <button
                   key={item}
