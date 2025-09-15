@@ -26,6 +26,10 @@ const SkillCategory = ({ title, skills }: SkillCategoryProps) => (
 const About = () => {
   const skillCategories = [
     {
+      title: "Communications & Navigation",
+      skills: ["Satellite Communication", "Wireless Communication", "Galileo Navigation Systems", "Signal Processing"],
+    },
+    {
       title: "Machine Learning & Deep Learning",
       skills: ["Supervised & Unsupervised Learning", "CNN", "GANs", "Transformers", "TensorFlow"],
     },
@@ -64,8 +68,13 @@ const About = () => {
             <h3 className="text-2xl font-semibold text-portfolio-blue mb-4">Biography</h3>
             <div className="space-y-4 text-gray-600">
               <p>
-                I am an AI Engineer and Data Scientist with a passion for developing intelligent solutions that solve real-world problems. 
-                My expertise spans across machine learning, computer vision, and natural language processing.
+                I am a Scientific Researcher specializing in satellite navigation systems and wireless communication 
+                technologies. Currently employed at Aerospace Data Security GmbH, I focus on Galileo satellite navigation 
+                research within their R&D group, combining AI and communication expertise to advance secure navigation solutions.
+              </p>
+              <p>
+                My expertise spans across satellite communication, wireless systems, machine learning, computer vision, 
+                and natural language processing, allowing me to bridge advanced AI techniques with cutting-edge communication technologies.
               </p>
               <p>
                 With a strong foundation in electrical and electronic engineering and specialized education in communication and information technology, 

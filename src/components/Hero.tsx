@@ -41,18 +41,19 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-7 space-y-8 text-white animate-fade-in">
             <div className="inline-block px-4 py-1 bg-white/10 backdrop-blur-sm rounded-full text-yellow-300 font-medium">
-              AI Engineer & Data Scientist
+              Scientific Researcher - AI & Communications
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight">
               Shawon Kumar <br /> <span className="text-yellow-300">Mondal</span>
             </h1>
             <div className="h-1 w-24 bg-yellow-300"></div>
             <h3 className="text-2xl md:text-3xl font-medium">
-              Solving complex problems with AI
+              Advancing satellite navigation & wireless communication
             </h3>
             <p className="text-lg text-white/80 max-w-xl leading-relaxed">
-              I specialize in developing AI-driven solutions to optimize workflows and
-              deliver actionable insights through machine learning, computer vision, and natural language processing.
+              Currently employed at Aerospace Data Security GmbH as a Scientific Researcher, 
+              I specialize in Galileo satellite navigation systems, wireless communication, 
+              and AI-driven solutions for secure and reliable navigation technologies.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-6">
@@ -76,10 +77,16 @@ const Hero = () => {
               </div>
               
               {/* Tech circles */}
-              <div className="absolute -top-8 -right-8 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-10">
+              <div className="absolute -top-8 -right-8 w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center z-10">
+                <span className="text-portfolio-blue font-bold text-xs">Satellite</span>
+              </div>
+              <div className="absolute -bottom-4 -left-8 w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center z-10">
+                <span className="text-portfolio-blue font-bold text-xs">Wireless</span>
+              </div>
+              <div className="absolute top-1/2 -left-12 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-10">
                 <span className="text-portfolio-blue font-bold">AI</span>
               </div>
-              <div className="absolute -bottom-4 -left-8 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-10">
+              <div className="absolute top-1/3 -right-12 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-10">
                 <span className="text-portfolio-blue font-bold">ML</span>
               </div>
             </div>
