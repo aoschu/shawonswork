@@ -38,7 +38,7 @@ const Experience = () => {
       duration: "Sep 2025 – Present",
       location: "Germany",
       responsibilities: [
-        "Research and development on Galileo satellite navigation systems within the R&D group.",
+        "Research and development on satellite navigation systems within the R&D group.",
         "Perform analysis, simulation, and documentation to support secure and reliable navigation.",
         "Collaborate with cross‑functional teams on requirements, testing, and integration."
       ]
